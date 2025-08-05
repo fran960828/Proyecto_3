@@ -1,0 +1,84 @@
+@use "../abstracts/abstracts" as *;
+.footer {
+  background-color: $black;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 32px 48px;
+  gap: 38px;
+  @include breakpoint("tablet") {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
+  @include breakpoint("desktop") {
+    padding: 80px 165px;
+  }
+  p {
+    color: $white;
+    font-family: $font-body;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    @include breakpoint("tablet") {
+      width: 40%;
+    }
+  }
+  &__social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    img {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+.footer_location {
+  background-color: $brown;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 32px 48px;
+  gap: 38px;
+  @include breakpoint("tablet") {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
+  @include breakpoint("desktop") {
+    padding: 80px 165px;
+  }
+  p {
+    color: $black;
+    font-family: $font-body;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    @include breakpoint("tablet") {
+      width: 40%;
+      margin-right: 10%;
+    }
+  }
+  &__social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    img {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

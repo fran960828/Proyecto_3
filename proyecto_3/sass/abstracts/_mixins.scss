@@ -1,0 +1,39 @@
+@use "variables" as *;
+@mixin breakpoint($bp) {
+  @if $bp == tablet {
+    @media (min-width: $bp-tablet) {
+      @content;
+    }
+  }
+
+  @if $bp == tablethorizontal {
+    @media (min-width: $bp-tablet-horizontal) {
+      @content;
+    }
+  }
+
+  @if $bp == desktop {
+    @media (min-width: $bp-desktop) {
+      @content;
+    }
+  }
+
+  @if $bp == desktopxl {
+    @media (min-width: $bp-desktop-xl) {
+      @content;
+    }
+  }
+}
+@mixin button(){
+  display: inline-block;
+  width: fit-content;
+  padding:15px 15px;
+  background-color: $black;
+  color:$white;
+  text-decoration: none;
+  font-family: $font-title;
+  font-weight: 800;
+  font-size: 20px;
+  
+
+}

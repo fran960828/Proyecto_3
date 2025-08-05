@@ -1,0 +1,157 @@
+@use "../abstracts/abstracts" as *;
+.header {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 32px;
+  @include breakpoint("tablet") {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-template-rows: 1fr 1fr;
+    margin-bottom: 140px;
+  }
+  @include breakpoint("desktop") {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: 1fr;
+    gap: 0px;
+  }
+  &__image {
+    width: 100%;
+    @include breakpoint("tablet") {
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+    }
+    @include breakpoint("desktop") {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+    img {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  &__logo {
+    padding: 0 16px;
+    @include breakpoint("tablet") {
+      grid-column: 2 / 3;
+      grid-row: 1 / 3;
+      align-self: center;
+      transform: translate(-40%, -70%);
+    }
+    @include breakpoint("desktop") {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      padding: 0px;
+      background-color: black;
+      justify-content: center;
+      transform: translateX(0%);
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          object-position: center;
+          transform: translateX(20%);
+        }
+      }
+    }
+  }
+  &__container {
+    margin-left: 16px;
+    margin-right: 16px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 32px;
+    margin-bottom: 160px;
+    @include breakpoint("tablet") {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      align-self: center;
+      margin-top: 50px;
+      transform: translate(-40%, -40%);
+    }
+    @include breakpoint("desktop") {
+      grid-column: 3 / 4;
+      grid-row: 1 / 2;
+    }
+  }
+
+  &__description {
+    width: 90%;
+    font-family: $font-body;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 32px;
+    color: $grey;
+    @include breakpoint("tablet") {
+      width: 110%;
+    }
+  }
+  &__button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    a.btn {
+      @include button();
+      text-transform: uppercase;
+      height: 58.8px;
+    }
+    .btn__arrow {
+      display: inline-block;
+      padding: 20px;
+      width: 71px;
+      height: 58.8px;
+      background-color: $brown;
+    }
+  }
+}
+
+.location {
+  &__button {
+    background-image: url("../../img/bg-map.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    @include breakpoint("tablet") {
+      padding-left: 40px;
+    }
+    @include breakpoint("desktop") {
+      padding-left: 155px;
+    }
+    a.btn {
+      @include button();
+      text-transform: uppercase;
+      height: 58.8px;
+    }
+    .btn__arrow {
+      display: inline-block;
+      padding: 20px;
+      width: 58.8px;
+      height: 58.8px;
+      background-color: $brown;
+      transform: rotate(180deg);
+    }
+  }
+}

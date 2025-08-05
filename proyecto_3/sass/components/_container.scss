@@ -1,0 +1,43 @@
+@use "../abstracts/abstracts" as *;
+
+.container {
+  background-color: $black;
+  padding: 32px 48px;
+  @include breakpoint("tablet") {
+    display: grid;
+    grid-template-columns: 0.4fr 0.6fr;
+    grid-template-rows: 1fr;
+    padding: 88px 40px;
+  }
+  @include breakpoint("desktop") {
+    padding: 80px 165px;
+  }
+  &__title h1 {
+    font-family: $font-title;
+    font-size: 48px;
+    line-height: 44px;
+    color: $white;
+    margin-bottom: 48px;
+  }
+  &__direccion {
+    display: flex;
+    flex-direction: column;
+    h2 {
+      font-family: $font-title;
+      font-size: 36px;
+      line-height: 44px;
+      color: $brown;
+      margin-bottom: 16px;
+    }
+    p {
+      font-family: $font-body;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 24px;
+      color: $white;
+    }
+    p:last-child {
+      margin-top: 16px;
+    }
+  }
+}

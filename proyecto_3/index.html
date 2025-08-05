@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto 3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__image">
+        <picture>
+          <source srcset="img/fondo-2.jpg" media="(min-width: 769px)" />
+          <source srcset="img/imagen-fondo.jpg" media="(max-width: 768px)" />
+          <img src="img/imagen-fondo.jpg" alt="fondo" />
+        </picture>
+      </div>
+      <div class="header__logo">
+        <a href="index.html">
+          <picture>
+            <source srcset="img/logo-desktop.svg" media="(min-width: 1200px)" />
+            <img src="img/logo.svg" alt="logo" />
+          </picture>
+        </a>
+      </div>
+      <div class="header__container">
+        <p class="header__description">
+          The arts in the collection of the Modern Art Gallery all started from
+          a spark of inspiration. Will these pieces inspire you? Visit us and
+          find out.
+        </p>
+        <div class="header__button">
+          <a href="html/location.html" class="btn">Our location</a>
+          <img src="img/arrow.svg" alt="flecha" class="btn__arrow" />
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="gallery">
+        <div class="gallery__seccion-1">
+          <img src="img/image-1.jpg" alt="img-1" class="gallery__image" />
+          <div class="gallery__container-1">
+            <h2 class="gallery__title-1">Your Day at the Gallery</h2>
+            <p class="gallery__text-1">
+              Wander through our distinct collections and find new insights
+              about our artists. Dive into the details of their creative
+              process.
+            </p>
+          </div>
+        </div>
+        <div class="gallery__seccion-2">
+          <img src="img/image-2.jpg" alt="img-2" class="gallery__image-2" />
+          <img src="img/image-3.jpg" alt="img-3" class="gallery__image-3" />
+          <div class="gallery__container-2">
+            <h2 class="gallery__title-2">Come & be inspired</h2>
+            <p class="gallery__text-2">
+              We’re excited to welcome you to our gallery and see how our
+              collections influence you.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer">
+        <a href="index.html" class="footer__logo">
+          <img src="img/logo-footer.svg" alt="logo footer" />
+        </a>
+        <p class="footer__description">
+          The Modern Art Gallery is free to all visitors and open seven days a
+          week from 8am to 9pm. Find us at 99 King Street, Newport, USA.
+        </p>
+        <div class="footer__social">
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="img/icon-facebook.svg"
+              alt="Facebook"
+              class="footer__icon"
+            />
+          </a>
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="img/icon-instagram.svg"
+              alt="Instagram"
+              class="footer__icon"
+            />
+          </a>
+          <a
+            href="https://www.twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="img/icon-twitter.svg"
+              alt="Twitter"
+              class="footer__icon"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
