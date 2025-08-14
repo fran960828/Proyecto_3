@@ -25,7 +25,9 @@
   }
 }
 @mixin button(){
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: fit-content;
   padding:15px 15px;
   background-color: $black;
